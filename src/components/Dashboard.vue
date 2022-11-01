@@ -14,6 +14,7 @@
       type="line"
       :options="options"
       :series="series"
+      style="display: flex; justify-content: center"
     />
   </div>
 </template>
