@@ -2,10 +2,10 @@
   <div>
     <h1>Exemplo de comportamento gráfico</h1>
 
-    <div>Bolsonaro: {{ a1 }}</div>
-    <div>Lula: {{ a2 }}</div>
+    <div>Bolsonaro: {{ a1Partial }} ({{ a1 }})</div>
+    <div>Lula: {{ a2Partial }} ({{ a2 }})</div>
 
-    <div>percentual dos votos declarados: {{ 100 / percent }}</div>
+    <div>representação dos votos declarados: {{ percent * 100 }}%</div>
 
     <button @click="reload">recarregar</button>
 
@@ -21,15 +21,18 @@
 import { ref } from 'vue';
 import VueApexCharts from 'vue3-apexcharts';
 
-let percent = 10000;
-let a1 = Math.ceil(58206354 / percent); //58206354
-let a2 = Math.ceil(60345999 / percent); //60345999;
+let a1 = 58206354;
+let a2 = 60345999;
+
+let percent = 0.0001;
+let a1Partial = Math.ceil(a1 * percent); //58206354
+let a2Partial = Math.ceil(a2 * percent); //60345999;
 
 const generateSeries = (candidate1, candidate2) => {
   let votes = [];
 
   let maxVotes = candidate1 + candidate2;
-  
+
   while (candidate2 > 0 || candidate1 > 0) {
     if (candidate2 > 0 && candidate1 > 0) {
       let random = Math.random() < 0.5;
@@ -118,9 +121,9 @@ const options = ref({
   },
 });
 
-const series = ref(generateSeries(a1, a2));
+const series = ref(generateSeries(a1Partial, a2Partial));
 
 const reload = () => {
-  series.value = generateSeries(a1, a2);
+  series.value = generateSeries(a1Partial, a2Partial);
 };
 </script>
