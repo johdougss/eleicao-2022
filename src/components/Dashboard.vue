@@ -16,6 +16,11 @@
       :series="series"
       style="display: flex; justify-content: center"
     />
+
+    <a
+      href="https://stackblitz.com/edit/eleicao-2022?file=src%2Fcomponents%2FDashboard.vue"
+      >codigo fonte</a
+    >
   </div>
 </template>
 <script setup>
