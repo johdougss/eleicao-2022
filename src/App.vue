@@ -1,9 +1,9 @@
 <script setup>
-import Playgdound from './components/Playground.vue';
+import Dashboard from './components/Dashboard.vue';
 </script>
 
 <template>
-  <Playgdound />
+  <Dashboard />
 </template>
 
 <style>

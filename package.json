@@ -9,8 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vuepic/vue-datepicker": "^3.5.2",
-    "vue": "^3.2.40"
+    "vue": "^3.2.40",
+    "apexcharts": "^3.35.3",
+    "vue3-apexcharts": "^1.4.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.2",
