@@ -15,8 +15,8 @@ import VueApexCharts from 'vue3-apexcharts';
 const generateSeries = () => {
   let votes = [];
 
-  let candidate1 = 58 * 100; //58206354;
-  let candidate2 = 60 * 100; //60345999;
+  let candidate1 = Math.ceil(58206354 / 10000); //58206354;
+  let candidate2 = Math.ceil(60345999 / 10000); //60345999;
 
   let maxVotes = candidate1 + candidate2;
 
