@@ -61,8 +61,6 @@ const generateSeries = (candidate1, candidate2) => {
         candidate2--;
       }
     }
-
-    votes.push();
   }
 
   let totalSeries = 50;
