@@ -30,7 +30,7 @@ import VueApexCharts from 'vue3-apexcharts';
 let a1 = 58206354;
 let a2 = 60345999;
 
-let percent = 0.00001;
+let percent = 0.0001;
 let a1Partial = Math.ceil(a1 * percent);
 let a2Partial = Math.ceil(a2 * percent);
 
